@@ -28,11 +28,11 @@ extension String {
             return(firstHalf: "", secondHalf: "")
         }
         
-        let substring1 = self[..<index].split(separator: "\n").last
-        let substring2 = self[index...].split(separator: "\n").first
+        let firstElement = self[..<index].split(separator: "\n").last
+        let secondElement = self[index...].split(separator: "\n").first
         
-        let firstHalf = String(substring1 ?? "")
-        let secondHalf = String(substring2 ?? "")
+        let firstHalf = String(firstElement ?? "")
+        let secondHalf = String(secondElement ?? "")
         
         return(firstHalf: firstHalf, secondHalf: secondHalf)
     }
